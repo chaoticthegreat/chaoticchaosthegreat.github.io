@@ -240,7 +240,7 @@ $("body").terminal(
 ██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝      Uptime: 4 hours, 20 mins
 ╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗    Packages: 1501 (pacman)
  ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝    Shell: zsh
-                    Hello! I am Ryan                         CPU: Intel i9-11900K (8) @ 4.1GHz
+                    Hello! I am Ryan                              CPU: Intel i9-11900K (8) @ 4.1GHz
                 Use help command to get help                      Memory: 6800MiB / 15944MiB (42%)
     `,
     prompt() {

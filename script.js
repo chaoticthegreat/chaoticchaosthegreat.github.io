@@ -135,7 +135,7 @@ $("body").terminal(
       this.echo(help);
     },
     // am
-    about: async function () {
+    about: function () {
       let value1 = Math.floor(Math.random()*1000);
       const about = $(`
         <span>IGN : <span id="IGN${value1}"></span><span style="color:aqua;" id="Name${value1}"></span>)

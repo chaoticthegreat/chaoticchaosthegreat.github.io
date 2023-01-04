@@ -6,6 +6,15 @@ const banner_help = `
 ██║  ██║███████╗███████╗██║     
 ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝                                                    
 `;
+const date_started = 1672791453512
+let millis=Date.now()-date_started;
+let seconds = Math.floor( millis/ 1000)
+let minutes = Math.floor(seconds/60)
+let hours=Math.floor(minutes/60)
+let days=Math.floor(hours/24)
+hours-=days*24
+minutes-=hours*60
+seconds-=minutes*60
 const links_banner=`
 ██╗     ██╗███╗   ██╗██╗  ██╗███████╗
 ██║     ██║████╗  ██║██║ ██╔╝██╔════╝
@@ -92,7 +101,7 @@ async function typeSentence(sentence, eleRef, delay = 100) {
     $(eleRef).append(letters[i]);
     i++
   }
-  return;
+  return (letters.length*100);
 }
 
 
@@ -126,7 +135,7 @@ $("body").terminal(
       this.echo(help);
     },
     // am
-    about: function () {
+    about: async function () {
       let value1 = Math.floor(Math.random()*1000);
       const about = $(`
         <span>IGN : <span id="IGN${value1}"></span><span style="color:aqua;" id="Name${value1}"></span>)
@@ -143,18 +152,19 @@ $("body").terminal(
         <br>
         Reddit :<span style="color:aqua;" id="Reddit${value1}">  </span>(<span class="cmd">try:</span> go reddit)
         <br>
-        Github : <span style="color:aqua;" id="Github${value1}"> ChaoticChaosTheGreat </span>(<span class="cmd">try:</span> go github)</span>
+        Github : <span style="color:aqua;" id="Github${value1}">  </span>(<span class="cmd">try:</span> go github)</span>
         `,value1);
-      typeSentence("ChAoTiC(","#IGN"+value1.toString())
-      typeSentence("ryan", "#Name"+value1.toString())
-      typeSentence("13 years","#Age"+value1.toString())
-      typeSentence("Alive","#Status"+value1.toString())
-      typeSentence("Student","#Job"+value1.toString())
-      typeSentence("I'm interested in ","#Description"+value1.toString())
-      typeSentence("data science & machine learning","#Description2"+value1.toString())
-      typeSentence("ChaoticChaosTheGreat","#Reddit"+value1.toString())
-      typeSentence("ChaoticChaosTheGreat","#Github"+value1.toString())
-      typeSentence("ryan.ryanabraham@gmail.com","#Mail"+value1.toString())
+      typeSentence("Chaotic(","#IGN"+value1.toString());
+      setTimeout(()=>{typeSentence("ryan", "#Name"+value1.toString());},900)
+      setTimeout(()=>{typeSentence("13 years","#Age"+value1.toString());},1400);
+      setTimeout(()=>{typeSentence("Alive","#Status"+value1.toString());},2300);
+      setTimeout(()=>{typeSentence("Student","#Job"+value1.toString());},3100);
+      setTimeout(()=>{typeSentence("I'm interested in ","#Description"+value1.toString());},3900);
+      setTimeout(()=>{typeSentence("data science & machine learning","#Description2"+value1.toString());},5800);
+      setTimeout(()=>{typeSentence("ryan.ryanabraham@gmail.com","#Mail"+value1.toString());},9000);
+      setTimeout(()=>{typeSentence("ChaoticChaosTheGreat","#Reddit"+value1.toString());},11600);
+      setTimeout(()=>{typeSentence("ChaoticChaosTheGreat","#Github"+value1.toString());},13700);
+      
       const banner = `${color("gray", about_banner)}`;
       this.echo(banner);
       this.echo(about);
@@ -177,13 +187,13 @@ $("body").terminal(
       } else if (web=="list") {
         const list = $(`
         <span>
-        <a href="https://github.com/ChaoticChaosTheGreat" target="_blank">Github</a> : ChaoticChaosTheGreat (go github)
+        <a href="https://github.com/ChaoticChaosTheGreat" target="_blank" style="color:darkred;text-decoration:none">[Github]</a> : ChaoticChaosTheGreat (<span style="color:aqua;">go github</span>)
         <br>
-        <a href="https://www.reddit.com/user/ChaoticChaosTheGreat" target="_blank">Reddit</a> : ChaoticChaosTheGreat (go reddit)
+        <a href="https://www.reddit.com/user/ChaoticChaosTheGreat" target="_blank" style="color:darkred;text-decoration:none">[Reddit]</a> : ChaoticChaosTheGreat (<span style="color:aqua;">go reddit</span>)
         <br>
-        <a href="https://replit.com/@ChAoTiCChAoSThEGrEaT" target="_blank">Replit</a> : ChAoTiCChAoSThEGrEaT (go replit)
+        <a href="https://replit.com/@ChAoTiCChAoSThEGrEaT" target="_blank" style="color:darkred;text-decoration:none">[Replit]</a> : ChAoTiCChAoSThEGrEaT (<span style="color:aqua;">go replit</span>)
         <br>
-        <a href="https://stackoverflow.com/users/20816793/chaotic" target="_blank">Stackoverflow</a> : ChAoTiC (go stack) 
+        <a href="https://stackoverflow.com/users/20816793/chaotic" target="_blank" style="color:darkred;text-decoration:none">[Stackoverflow]</a> : ChAoTiC (<span style="color:aqua;">go stack</span>) 
         </span>
         `);
         const banner = `${color("gray", links_banner)}`;
@@ -237,7 +247,7 @@ $("body").terminal(
 ██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗    OS: Ubuntu Linux x86_64
 ██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝    Host: System Product Name System Version
 ██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗      Kernel: 7.12.1-108-tkg-bmq
-██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝      Uptime: 4 hours, 20 mins
+██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝      Uptime: ${days} days, ${hours} hours, ${minutes} minutes
 ╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗    Packages: 1501 (pacman)
  ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝    Shell: zsh
                     Hello! I am Ryan                              CPU: Intel i9-11900K (8) @ 4.1GHz

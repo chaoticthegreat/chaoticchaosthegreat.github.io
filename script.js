@@ -21,9 +21,9 @@ let seconds = Math.floor( millis/ 1000)
 let minutes = Math.floor(seconds/60)
 let hours=Math.floor(minutes/60)
 let days=Math.floor(hours/24)
-hours-=days*24
-minutes-=hours*60
 seconds-=minutes*60
+minutes-=hours*60
+hours-=days*24
 const links_banner=`
 ██╗     ██╗███╗   ██╗██╗  ██╗███████╗
 ██║     ██║████╗  ██║██║ ██╔╝██╔════╝
@@ -31,14 +31,14 @@ const links_banner=`
 ██║     ██║██║╚██╗██║██╔═██╗ ╚════██║
 ███████╗██║██║ ╚████║██║  ██╗███████║
 ╚══════╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝`
-const about_banner = ` 
-█████╗ ██████╗  ██████╗ ██╗   ██╗████████╗
-██╔══██╗██╔══██╗██╔═══██╗██║   ██║╚══██╔══╝
-███████║██████╔╝██║   ██║██║   ██║   ██║   
-██╔══██║██╔══██╗██║   ██║██║   ██║   ██║   
-██║  ██║██████╔╝╚██████╔╝╚██████╔╝   ██║   
-╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚═════╝    ╚═╝   
-                                          `;
+const about_banner = `
+ ██████╗██╗  ██╗ █████╗  ██████╗ ████████╗██╗ ██████╗
+██╔════╝██║  ██║██╔══██╗██╔═══██╗╚══██╔══╝██║██╔════╝
+██║     ███████║███████║██║   ██║   ██║   ██║██║     
+██║     ██╔══██║██╔══██║██║   ██║   ██║   ██║██║     
+╚██████╗██║  ██║██║  ██║╚██████╔╝   ██║   ██║╚██████╗
+ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝ ╚═════╝                           
+`;
 const joke_banner = `
      ██╗ ██████╗ ██╗  ██╗███████╗
      ██║██╔═══██╗██║ ██╔╝██╔════╝
@@ -86,7 +86,7 @@ const windowx = (url, windowName) => {
   newwindow = window.open(
     url,
     windowName,
-    "left=700,top=10,height=400,width=600"
+    "left=700w,top=10,height=400,width=600"
   );
   if (window.focus) {
     newwindow.focus();
@@ -94,9 +94,10 @@ const windowx = (url, windowName) => {
   return false;
 };
 
-async function typeSentence(sentence, eleRef, delay = 100) {
+async function typeSentence(sentence, eleRef, delay = 100,rand=0) {
   const letters = sentence.split("");
   let i = 0;
+  delay+=Math.random()*rand
   while(i < letters.length) {
     await waitForMs(delay);
     $(eleRef).append(letters[i]);
@@ -138,30 +139,59 @@ $("body").terminal(
       this.echo(help);
     },
     project: function(name) {
+      let project_banner_=project_banner
       let projects= [
-        {"lang":"Python","name":"Online Tic-Tac-Toe","link":"https://github.com/ChaoticChaosTheGreat/Client-for-Tic-Tac-Toe","alias":"tictactoe"},
-        {"lang": "Python","name":"Online Rock-Paper-Scissor","alias":"rockpaperscissor","link":"https://github.com/ChaoticChaosTheGreat/Rock-Paper-Scissor-Client"}
+        {"lang":"Python","name":"Online Tic-Tac-Toe","link":"https://github.com/ChaoticChaosTheGreat/Client-for-Tic-Tac-Toe","alias":"tictactoe","banner":`████████╗██╗ ██████╗    ████████╗ █████╗  ██████╗    ████████╗ ██████╗ ███████╗
+╚══██╔══╝██║██╔════╝    ╚══██╔══╝██╔══██╗██╔════╝    ╚══██╔══╝██╔═══██╗██╔════╝
+   ██║   ██║██║            ██║   ███████║██║            ██║   ██║   ██║█████╗  
+   ██║   ██║██║            ██║   ██╔══██║██║            ██║   ██║   ██║██╔══╝  
+   ██║   ██║╚██████╗       ██║   ██║  ██║╚██████╗       ██║   ╚██████╔╝███████╗
+   ╚═╝   ╚═╝ ╚═════╝       ╚═╝   ╚═╝  ╚═╝ ╚═════╝       ╚═╝    ╚═════╝ ╚══════`,"desc":`Tic-tac-toe but ONLINE. This allows you to play tic-tac-toe with your friends over the internet using flask & requests. I made this because there was no easy way to host a socket server on replit, so I deicided to use flask as the server and requests to send and recieve messages. This pt.2 of a ongoing series (three as of now). Be sure to check out the other ones.`,"devs":"@ChaoticChaosTheGreat"},
+        {"lang": "Python","name":"Online Rock-Paper-Scissor","alias":"rockpaperscissor","link":"https://github.com/ChaoticChaosTheGreat/Rock-Paper-Scissor-Client","devs":"@ChaoticChaosTheGreat","banner":`██████╗  ██████╗  ██████╗██╗  ██╗    ██████╗  █████╗ ██████╗ ███████╗██████╗     ███████╗ ██████╗██╗███████╗███████╗ ██████╗ ██████╗ 
+██╔══██╗██╔═══██╗██╔════╝██║ ██╔╝    ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗    ██╔════╝██╔════╝██║██╔════╝██╔════╝██╔═══██╗██╔══██╗
+██████╔╝██║   ██║██║     █████╔╝     ██████╔╝███████║██████╔╝█████╗  ██████╔╝    ███████╗██║     ██║███████╗███████╗██║   ██║██████╔╝
+██╔══██╗██║   ██║██║     ██╔═██╗     ██╔═══╝ ██╔══██║██╔═══╝ ██╔══╝  ██╔══██╗    ╚════██║██║     ██║╚════██║╚════██║██║   ██║██╔══██╗
+██║  ██║╚██████╔╝╚██████╗██║  ██╗    ██║     ██║  ██║██║     ███████╗██║  ██║    ███████║╚██████╗██║███████║███████║╚██████╔╝██║  ██║
+╚═╝  ╚═╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝    ╚═╝     ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝╚═╝╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝`,"desc":"Rock-paper-scissor ONLINE. This allows you to play rock paper scissors with your friend over the internet. This was inspired by the COVID pandemic in which social distancing prevented hand games like this to be played. The reason I used flask & requests instead of the traditional sockets package is that it is not easy (or not possible) to deploy a socket server on replit. This is pt.1 of the ongoing series (three as of now). Be sure to check out the other ones!"}
       ]
-      let project_aliases=["tictactoe"]
+      let project_aliases=["tictactoe","rockpaperscissor"]
       let i=0
       let project_text=""
       if (name=="list") {
         while (i<projects.length) {
           project_text+=`
-          <span style="color:#ff9933;">[${projects[i]["lang"]}]  </span><span>${projects[i]["name"]}  </span> <a href=${projects[i]["link"]} target="_blank" style="color:#ff6f6a;">&#60&#60GitHub&#62&#62</a><span style="color:#63b5cf;">  (try: project ${projects[i]["alias"]})</span>
+          <br>
+          <span style="color:#ff9933;">[${projects[i]["lang"]}]  </span><span>${projects[i]["name"]}  </span> <span style="color:#63b5cf;">  (try: project ${projects[i]["alias"]})</span>
           <br>
           `;
           i++;
-        }
+        } 
       } else if (project_aliases.includes(name)) {
           for (let i = 0; i < project_aliases.length; i++) {
             if (name==projects[i]["alias"]) {
-              go_url(projects[i]["link"]);
+              let value1 = Math.floor(Math.random()*1000);
+              project_banner_=projects[i]["banner"]
+              project_text+=`
+              <br>
+              <div class="desc"><span style="color:#a320ce;">[Description]  </span> <span id="desc${value1}"></span></div>
+              <br>
+              <span style="color:#ff9933;">[Language]  </span><span id="lang${value1}"></span>
+              <br>
+              <br>
+              <span style="color:#98fb98">[Developers]  </span><span id="dev${value1}"></span>
+              <br>
+              <br>
+              <span style="color:#F0E68C">[Github]  </span><a style="color:55f;" href="${projects[i]["link"]}" id="link${value1}"></a>
+              `
+              typeSentence(projects[i]["desc"], "#desc"+value1.toString(),delay=25,rand=100);
+              typeSentence(projects[i]["lang"], "#lang"+value1.toString(),delay=25,rand=100);
+              typeSentence(projects[i]["devs"], "#dev"+value1.toString(),delay=25,rand=100);
+              typeSentence(projects[i]["link"], "#link"+value1.toString(),delay=25,rand=100);
               break;
             }
           }
       }
-        const banner = `${color("blue", project_banner)}`;
+        const banner = `${color("blue", project_banner_)}`;
         this.echo(banner)
         this.echo($(`${project_text}`))
       

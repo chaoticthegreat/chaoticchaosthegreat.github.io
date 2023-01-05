@@ -183,7 +183,7 @@ $("body").terminal(
               <br>
               <span style="color:#F0E68C">[Github]  </span><a style="color:55f;" href="${projects[i]["link"]}" id="link${value1}"></a>
               `
-              typeSentence(projects[i]["desc"], "#desc"+value1.toString(),delay=25,rand=100);
+              typeSentence(projects[i]["desc"], "#desc"+value1.toString(),delay=25,rand=50);
               typeSentence(projects[i]["lang"], "#lang"+value1.toString(),delay=25,rand=100);
               typeSentence(projects[i]["devs"], "#dev"+value1.toString(),delay=25,rand=100);
               typeSentence(projects[i]["link"], "#link"+value1.toString(),delay=25,rand=100);

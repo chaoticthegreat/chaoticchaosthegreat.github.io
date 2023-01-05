@@ -1,3 +1,7 @@
 .cmd{
     color: #f7c332;
 }
+.desc{
+  max-width: 600px;
+  shape-outside: content-box;
+}

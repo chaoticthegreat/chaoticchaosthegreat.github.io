@@ -152,9 +152,27 @@ $("body").terminal(
 ██████╔╝██║   ██║██║     █████╔╝     ██████╔╝███████║██████╔╝█████╗  ██████╔╝    ███████╗██║     ██║███████╗███████╗██║   ██║██████╔╝
 ██╔══██╗██║   ██║██║     ██╔═██╗     ██╔═══╝ ██╔══██║██╔═══╝ ██╔══╝  ██╔══██╗    ╚════██║██║     ██║╚════██║╚════██║██║   ██║██╔══██╗
 ██║  ██║╚██████╔╝╚██████╗██║  ██╗    ██║     ██║  ██║██║     ███████╗██║  ██║    ███████║╚██████╗██║███████║███████║╚██████╔╝██║  ██║
-╚═╝  ╚═╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝    ╚═╝     ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝╚═╝╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝`,"desc":"Rock-paper-scissor ONLINE. This allows you to play rock paper scissors with your friend over the internet. This was inspired by the COVID pandemic in which social distancing prevented hand games like this to be played. The reason I used flask & requests instead of the traditional sockets package is that it is not easy (or not possible) to deploy a socket server on replit. This is pt.1 of the ongoing series (three as of now). Be sure to check out the other ones!"}
+╚═╝  ╚═╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝    ╚═╝     ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝╚═╝╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝`,"desc":"Rock-paper-scissor ONLINE. This allows you to play rock paper scissors with your friend over the internet. This was inspired by the COVID pandemic in which social distancing prevented hand games like this to be played. The reason I used flask & requests instead of the traditional sockets package is that it is not easy (or not possible) to deploy a socket server on replit. This is pt.1 of the ongoing series (three as of now). Be sure to check out the other ones!"},
+        {"lang":"Python","name":"Online Chopsticks","alias":"chopsticks","link":"https://github.com/ChaoticChaosTheGreat/Client-for-Tic-Tac-Toe","devs":"@ChaoticChaosTheGreat","banner":` ██████╗██╗  ██╗ ██████╗ ██████╗ ███████╗████████╗██╗ ██████╗██╗  ██╗███████╗
+██╔════╝██║  ██║██╔═══██╗██╔══██╗██╔════╝╚══██╔══╝██║██╔════╝██║ ██╔╝██╔════╝
+██║     ███████║██║   ██║██████╔╝███████╗   ██║   ██║██║     █████╔╝ ███████╗
+██║     ██╔══██║██║   ██║██╔═══╝ ╚════██║   ██║   ██║██║     ██╔═██╗ ╚════██║
+╚██████╗██║  ██║╚██████╔╝██║     ███████║   ██║   ██║╚██████╗██║  ██╗███████║
+ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚══════╝   ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝`,"desc":"Chopsticks ONLINE. Inspired by the famous hand-game chopsticks among school kids, this was made to help people play the game while social distancing. Mainly just made to continue the online game series (3 as of now). Uses requests and flasks like the others."},
+        {"lang":"Java", "name":"Delta Robotics","alias":"robotics","link":"https://github.com/Delta-Robotics-21463","devs":"@ChaoticChaosTheGreat, @aristacratic","banner": `██████╗ ███████╗██╗  ████████╗ █████╗     ██████╗  ██████╗ ██████╗  ██████╗ ████████╗██╗ ██████╗███████╗
+██╔══██╗██╔════╝██║  ╚══██╔══╝██╔══██╗    ██╔══██╗██╔═══██╗██╔══██╗██╔═══██╗╚══██╔══╝██║██╔════╝██╔════╝
+██║  ██║█████╗  ██║     ██║   ███████║    ██████╔╝██║   ██║██████╔╝██║   ██║   ██║   ██║██║     ███████╗
+██║  ██║██╔══╝  ██║     ██║   ██╔══██║    ██╔══██╗██║   ██║██╔══██╗██║   ██║   ██║   ██║██║     ╚════██║
+██████╔╝███████╗███████╗██║   ██║  ██║    ██║  ██║╚██████╔╝██████╔╝╚██████╔╝   ██║   ██║╚██████╗███████║
+╚═════╝ ╚══════╝╚══════╝╚═╝   ╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝    ╚═╝   ╚═╝ ╚═════╝╚══════`,"desc":"2022-2023, ftc robotics team. Contains our teleop and autonomous code for the 2022-2023 powerplay season."},
+        {"lang":"Python","name":"Ensemble/Blender MNIST ML Model","alias":"ensemble-mnist","link":"https://github.com/ChaoticChaosTheGreat/MNIST-Blender-Ensemble","devs":"@ChaoticChaosTheGreat","banner":`███████╗███╗   ██╗███████╗███████╗███╗   ███╗██████╗ ██╗     ███████╗    ███╗   ███╗███╗   ██╗██╗███████╗████████╗
+██╔════╝████╗  ██║██╔════╝██╔════╝████╗ ████║██╔══██╗██║     ██╔════╝    ████╗ ████║████╗  ██║██║██╔════╝╚══██╔══╝
+█████╗  ██╔██╗ ██║███████╗█████╗  ██╔████╔██║██████╔╝██║     █████╗      ██╔████╔██║██╔██╗ ██║██║███████╗   ██║   
+██╔══╝  ██║╚██╗██║╚════██║██╔══╝  ██║╚██╔╝██║██╔══██╗██║     ██╔══╝      ██║╚██╔╝██║██║╚██╗██║██║╚════██║   ██║   
+███████╗██║ ╚████║███████║███████╗██║ ╚═╝ ██║██████╔╝███████╗███████╗    ██║ ╚═╝ ██║██║ ╚████║██║███████║   ██║   
+╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝╚═╝     ╚═╝╚═════╝ ╚══════╝╚══════╝    ╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝╚══════╝   ╚═╝ `,"desc":"ML ensemble model using random forests, extra forests, kneighbors, and a MLP. Also made a blender but its slightly worse. "}
       ]
-      let project_aliases=["tictactoe","rockpaperscissor"]
+      let project_aliases=["tictactoe","rockpaperscissor","chopsticks","robotics"]
       let i=0
       let project_text=""
       if (name=="list") {
@@ -183,7 +201,7 @@ $("body").terminal(
               <br>
               <span style="color:#F0E68C">[Github]  </span><a style="color:55f;" href="${projects[i]["link"]}" id="link${value1}"></a>
               `
-              typeSentence(projects[i]["desc"], "#desc"+value1.toString(),delay=25,rand=50);
+              typeSentence(projects[i]["desc"], "#desc"+value1.toString(),delay=25,rand=100);
               typeSentence(projects[i]["lang"], "#lang"+value1.toString(),delay=25,rand=100);
               typeSentence(projects[i]["devs"], "#dev"+value1.toString(),delay=25,rand=100);
               typeSentence(projects[i]["link"], "#link"+value1.toString(),delay=25,rand=100);
